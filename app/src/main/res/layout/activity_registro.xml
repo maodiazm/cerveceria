@@ -7,9 +7,9 @@
     tools:context=".view.ui.activities.RegistroActivity">
 
     <ImageView
-        android:id="@+id/imageView8"
-        android:layout_width="68dp"
-        android:layout_height="744dp"
+        android:id="@+id/imageView5"
+        android:layout_width="30dp"
+        android:layout_height="745dp"
         android:layout_marginTop="20dp"
         android:layout_marginEnd="30dp"
         android:layout_marginBottom="30dp"
@@ -27,8 +27,8 @@
 
     <ImageView
         android:id="@+id/imageView3"
-        android:layout_width="69dp"
-        android:layout_height="735dp"
+        android:layout_width="31dp"
+        android:layout_height="745dp"
         android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="30dp"
@@ -42,7 +42,7 @@
         app:layout_constraintHorizontal_bias="1.0"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
-        app:layout_constraintVertical_bias="0.462" />
+        app:layout_constraintVertical_bias="0.384" />
 
     <ImageView
         android:id="@+id/imageView2"
