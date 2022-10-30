@@ -1,3 +1,2 @@
 # cerveceria
-#Ivan 
 desarrollo movil
