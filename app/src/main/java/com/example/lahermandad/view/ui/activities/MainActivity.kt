@@ -5,10 +5,8 @@ import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.os.Handler
 import android.os.Looper
-import android.view.LayoutInflater
 import com.example.lahermandad.R
 import com.example.lahermandad.databinding.ActivityMainBinding
-import kotlinx.coroutines.delay
 
 class MainActivity : AppCompatActivity() {
     lateinit var binding: ActivityMainBinding
@@ -24,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         handler=Handler(Looper.myLooper()!!)
         handler.postDelayed(
             {
-                val intent= Intent(this, LoginActivity::class.java)
+                val intent= Intent(this, login::class.java)
                 startActivity(intent)
                 finish()
             }, 4000)
