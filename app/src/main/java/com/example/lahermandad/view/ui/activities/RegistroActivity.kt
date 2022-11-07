@@ -13,7 +13,7 @@ class RegistroActivity : AppCompatActivity() {
         setContentView(R.layout.activity_registro)
         registrobutton = findViewById(R.id.registrobutton)
         registrobutton.setOnClickListener {
-            startActivity(Intent(this,Login::class.java))
+            startActivity(Intent(this,login::class.java))
         }
 
     }

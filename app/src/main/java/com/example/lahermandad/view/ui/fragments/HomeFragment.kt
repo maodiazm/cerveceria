@@ -29,7 +29,32 @@ class HomeFragment : Fragment() {
         val cardNos = view.findViewById<ImageView>(R.id.cardnosotros)
 
         cardNos.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_nosotrosFragment)
+            findNavController().navigate(R.id.action_homeFragment_to_NosotrosFragment)
+        }
+        val cardCom = view.findViewById<ImageView>(R.id.cardcomentarios)
+
+        cardCom.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_ComentariosFragment)
+        }
+        val cardComp = view.findViewById<ImageView>(R.id.cardcompras)
+
+        cardComp.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_ComprasFragment)
+        }
+        val cardDes = view.findViewById<ImageView>(R.id.cardlista)
+
+        cardDes.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_DeseoFragment)
+        }
+        val cardGps = view.findViewById<ImageView>(R.id.cardubicacion)
+
+        cardGps.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_GpsFragment)
+        }
+        val cardUs = view.findViewById<ImageView>(R.id.cardusuarios)
+
+        cardUs.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_UsuarioFragment)
         }
     }
 

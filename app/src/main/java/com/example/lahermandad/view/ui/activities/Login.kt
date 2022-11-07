@@ -7,7 +7,7 @@ import android.widget.Button
 import android.widget.TextView
 import com.example.lahermandad.R
 
-class Login : AppCompatActivity() {
+class login : AppCompatActivity() {
 
     lateinit var registrobutton : Button
     lateinit var iniciobutton : Button
