@@ -13,7 +13,7 @@ class RecuperarActivity : AppCompatActivity() {
         setContentView(R.layout.activity_recuperar)
         restaurarbutton=findViewById(R.id.Recuperarbutton)
         restaurarbutton.setOnClickListener {
-            startActivity(Intent(this,login::class.java))
+            startActivity(Intent(this,Login::class.java))
         }
     }
 }

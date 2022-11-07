@@ -1,4 +1,4 @@
-package com.example.lahermandad.view.ui.activities.fragments
+package com.example.lahermandad.view.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -26,9 +26,9 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
+        val cardNos = view.findViewById<ImageView>(R.id.cardnosotros)
 
-        val cardLib=view.findViewById<ImageView>(R.id.cardnosotros)
-        cardLib.setOnClickListener {
+        cardNos.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_nosotrosFragment)
         }
     }

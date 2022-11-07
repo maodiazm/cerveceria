@@ -1,4 +1,4 @@
-package com.example.lahermandad.view.ui.activities.fragments
+package com.example.lahermandad.view.ui.fragments
 
 import android.os.Bundle
 import androidx.fragment.app.Fragment
@@ -8,7 +8,7 @@ import android.view.ViewGroup
 import com.example.lahermandad.R
 
 
-class comentariosFragment : Fragment() {
+class NosotrosFragment : Fragment() {
 
 
     override fun onCreateView(
@@ -16,7 +16,7 @@ class comentariosFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_comentarios, container, false)
+        return inflater.inflate(R.layout.fragment_nosotros, container, false)
     }
 
 

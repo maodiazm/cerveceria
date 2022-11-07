@@ -6,26 +6,28 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:orientation="vertical"
     android:background="@color/white"
-    tools:context=".view.ui.activities.fragments.HomeFragment">
+    tools:context=".view.ui.fragments.HomeFragment">
 
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="vertical"
+        tools:ignore="UselessParent">
 
         <RelativeLayout
             android:layout_width="match_parent"
-            android:layout_height="130dp"
+            android:layout_height="120dp"
             android:layout_marginLeft="20dp"
             android:layout_marginTop="32dp"
             android:layout_marginRight="20dp"
             android:background="@drawable/theme_gradients_background">
 
             <ImageView
+                android:id="@+id/imageView4"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
-                android:src="@drawable/logo">
-            </ImageView>
+                android:contentDescription="@string/logo"
+                android:src="@drawable/logo" />
         </RelativeLayout>
 
         <ScrollView
@@ -35,152 +37,212 @@
             <GridLayout
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
-                android:columnCount="2"
-                android:rowCount="3"
                 android:alignmentMode="alignMargins"
-                android:columnOrderPreserved="false">
+                android:columnCount="2"
+                android:columnOrderPreserved="false"
+                android:rowCount="3">
 
                 <androidx.cardview.widget.CardView
-                    android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
-                    app:cardElevation="5dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
                     app:cardCornerRadius="5dp"
-                    android:layout_margin="12dp">
+                    app:cardElevation="5dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
                         android:gravity="center"
+                        android:orientation="vertical"
                         android:padding="16dp">
 
                         <ImageView
+                            android:id="@+id/cardnosotros"
                             android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:src="@drawable/nosotros"
-                            android:id="@+id/cardnosotros">
+                            android:layout_height="115dp"
+                            android:contentDescription="@string/quienes_somos"
+                            android:src="@drawable/nosotros">
+
                         </ImageView>
                     </LinearLayout>
+
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
-                    app:cardElevation="5dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
                     app:cardCornerRadius="5dp"
-                    android:layout_margin="12dp">
+                    app:cardElevation="5dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
                         android:gravity="center"
+                        android:orientation="vertical"
                         android:padding="16dp">
 
                         <ImageView
+                            android:id="@+id/cardcomentarios"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
+                            android:contentDescription="@string/comentarios"
                             android:src="@drawable/comentarios_home">
+
                         </ImageView>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
-                    app:cardElevation="5dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
                     app:cardCornerRadius="5dp"
-                    android:layout_margin="12dp">
+                    app:cardElevation="5dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
                         android:gravity="center"
+                        android:orientation="vertical"
                         android:padding="16dp">
 
                         <ImageView
+                            android:id="@+id/cardcompras"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
+                            android:contentDescription="@string/compras"
                             android:src="@drawable/compras_home">
+
                         </ImageView>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
-                    app:cardElevation="5dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
                     app:cardCornerRadius="5dp"
-                    android:layout_margin="12dp">
+                    app:cardElevation="5dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
                         android:gravity="center"
+                        android:orientation="vertical"
                         android:padding="16dp">
 
                         <ImageView
+                            android:id="@+id/cardubicacion"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
+                            android:contentDescription="@string/ubicacion_del_pedido"
                             android:src="@drawable/gps_home">
+
                         </ImageView>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
-                    app:cardElevation="5dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
                     app:cardCornerRadius="5dp"
-                    android:layout_margin="12dp">
+                    app:cardElevation="5dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
                         android:gravity="center"
+                        android:orientation="vertical"
                         android:padding="16dp">
 
                         <ImageView
+                            android:id="@+id/cardlista"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
+                            android:contentDescription="@string/lista_de_deseos"
                             android:src="@drawable/lista_deseo">
+
                         </ImageView>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
                 <androidx.cardview.widget.CardView
-                    android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:layout_columnWeight="1"
+                    android:layout_height="wrap_content"
                     android:layout_rowWeight="1"
-                    app:cardElevation="5dp"
+                    android:layout_columnWeight="1"
+                    android:layout_margin="12dp"
                     app:cardCornerRadius="5dp"
-                    android:layout_margin="12dp">
+                    app:cardElevation="5dp">
+
                     <LinearLayout
                         android:layout_width="match_parent"
                         android:layout_height="match_parent"
-                        android:orientation="vertical"
                         android:gravity="center"
+                        android:orientation="vertical"
                         android:padding="16dp">
 
                         <ImageView
+                            android:id="@+id/cardusuarios"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
+                            android:contentDescription="@string/usuario"
                             android:src="@drawable/usuario_home">
+
                         </ImageView>
                     </LinearLayout>
                 </androidx.cardview.widget.CardView>
 
             </GridLayout>
         </ScrollView>
+
+        <TextView
+            android:id="@+id/textView4"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="57dp"
+            android:layout_marginEnd="58dp"
+            android:layout_marginBottom="10dp"
+            android:fontFamily="@font/capsmall_clean"
+            android:gravity="center"
+            android:text="BIENVENIDOS "
+            android:textColor="@color/teal_700"
+            android:textSize="40sp"
+            android:textStyle="normal"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.511"
+            app:layout_constraintStart_toStartOf="parent" />
+
+        <TextView
+            android:id="@+id/textView2"
+            android:layout_width="match_parent"
+            android:layout_height="31dp"
+            android:layout_marginStart="17dp"
+            android:layout_marginEnd="16dp"
+            android:layout_marginBottom="16dp"
+            android:gravity="center"
+            android:text="El lugar donde la cerveza y el arte se vuelven uno"
+            android:textColor="@color/color_secundario"
+            android:textSize="18sp"
+            android:textStyle="italic"
+            app:layout_constraintBottom_toBottomOf="parent"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintHorizontal_bias="0.0"
+            app:layout_constraintStart_toStartOf="parent"
+            tools:ignore="MissingConstraints" />
     </LinearLayout>
 
 </LinearLayout>

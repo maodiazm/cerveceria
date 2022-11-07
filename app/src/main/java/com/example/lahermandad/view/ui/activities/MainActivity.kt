@@ -22,7 +22,7 @@ class MainActivity : AppCompatActivity() {
         handler=Handler(Looper.myLooper()!!)
         handler.postDelayed(
             {
-                val intent= Intent(this, login::class.java)
+                val intent= Intent(this, Login::class.java)
                 startActivity(intent)
                 finish()
             }, 4000)
