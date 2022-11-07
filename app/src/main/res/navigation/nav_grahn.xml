@@ -53,9 +53,6 @@
             android:id="@+id/action_tiendaFragment_to_UsuarioFragment"
             app:destination="@id/usuarioFragment" />
         <action
-            android:id="@+id/action_tiendaFragment_self"
-            app:destination="@id/tiendaFragment" />
-        <action
             android:id="@+id/action_tiendaFragment_to_GpsFragment"
             app:destination="@id/gpsFragment" />
         <action
@@ -90,9 +87,6 @@
         <action
             android:id="@+id/action_usuarioFragment_to_RecomendadoFragment"
             app:destination="@id/recomendadoFragment" />
-        <action
-            android:id="@+id/action_usuarioFragment_self"
-            app:destination="@id/usuarioFragment" />
     </fragment>
     <fragment
         android:id="@+id/atencionFragment"

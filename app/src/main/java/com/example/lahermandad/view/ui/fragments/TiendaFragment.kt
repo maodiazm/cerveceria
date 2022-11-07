@@ -33,7 +33,6 @@ class TiendaFragment : Fragment() {
         buttom.setOnNavigationItemReselectedListener {
             when(it.itemId){
                 R.id.home -> findNavController().navigate(R.id.action_tiendaFragment_to_HomeFragment)
-                R.id.tienda -> findNavController().navigate(R.id.action_tiendaFragment_self)
                 R.id.recomendado -> findNavController().navigate(R.id.action_tiendaFragment_to_RecomendadoFragment)
                 R.id.mapa -> findNavController().navigate(R.id.action_tiendaFragment_to_GpsFragment)
                 R.id.perfil -> findNavController().navigate(R.id.action_tiendaFragment_to_UsuarioFragment)

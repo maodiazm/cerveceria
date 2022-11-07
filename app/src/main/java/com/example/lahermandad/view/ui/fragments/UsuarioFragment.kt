@@ -29,7 +29,6 @@ class UsuarioFragment : Fragment() {
                 R.id.tienda -> findNavController().navigate(R.id.action_usuarioFragment_to_TiendaFragment)
                 R.id.recomendado -> findNavController().navigate(R.id.action_usuarioFragment_to_RecomendadoFragment)
                 R.id.mapa -> findNavController().navigate(R.id.action_usuarioFragment_to_GpsFragment)
-                R.id.perfil -> findNavController().navigate(R.id.action_usuarioFragment_self)
             }
         }
 
