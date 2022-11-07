@@ -5,39 +5,37 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.ui.fragments.UsuarioFragment">
+    
+    <ImageView
+        android:id="@+id/foto_perfil"
+        android:layout_marginTop="15dp"
+        android:layout_marginLeft="15dp"
+        android:layout_width="250dp"
+        android:layout_height="220dp"
+        android:src="@drawable/perfilx">
+    </ImageView>
 
-    <RelativeLayout
-        android:id="@+id/encabezado"
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:background="@drawable/theme_gradients_background">
+    <Button
+        android:id="@+id/botoncamara"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="50dp"
+        android:layout_marginLeft="280dp"
+        android:backgroundTint="@color/color_secundario"
+        android:text="Camara"
+        android:fontFamily="@font/myriad_semibold">
+    </Button>
 
-        <ImageView
-            android:layout_width="111dp"
-            android:layout_height="120dp"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/logo">
-
-        </ImageView>
-        <TextView
-            android:layout_width="281dp"
-            android:layout_height="115dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="9dp"
-            android:layout_marginEnd="81dp"
-            android:gravity="center"
-            android:text="Perfil"
-            android:textStyle="normal"
-            android:textColor="@color/white"
-            android:fontFamily="@font/capsmall_clean"
-            android:textSize="40sp">
-
-        </TextView>
-    </RelativeLayout>
+    <Button
+        android:id="@+id/botongaleria"
+        android:layout_width="100dp"
+        android:layout_height="60dp"
+        android:layout_marginTop="150dp"
+        android:layout_marginLeft="280dp"
+        android:backgroundTint="@color/fondo_inicio"
+        android:text="Galeria"
+        android:fontFamily="@font/myriad_semibold">
+    </Button>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/buttonNavigationMenu"
@@ -54,5 +52,8 @@
         tools:ignore="MissingContrains">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+
+
 
 </FrameLayout>

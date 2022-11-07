@@ -67,9 +67,6 @@
         <action
             android:id="@+id/action_tiendaFragment_to_ComprasFragment"
             app:destination="@id/comprasFragment" />
-        <action
-            android:id="@+id/action_tiendaFragment_to_atencionFragment"
-            app:destination="@id/atencionFragment" />
     </fragment>
     <fragment
         android:id="@+id/gpsFragment"
@@ -80,7 +77,23 @@
         android:id="@+id/usuarioFragment"
         android:name="com.example.lahermandad.view.ui.fragments.UsuarioFragment"
         android:label="fragment_usuario"
-        tools:layout="@layout/fragment_usuario" />
+        tools:layout="@layout/fragment_usuario" >
+        <action
+            android:id="@+id/action_usuarioFragment_to_TiendaFragment"
+            app:destination="@id/tiendaFragment" />
+        <action
+            android:id="@+id/action_usuarioFragment_to_GpsFragment"
+            app:destination="@id/gpsFragment" />
+        <action
+            android:id="@+id/action_usuarioFragment_to_HomeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_usuarioFragment_to_RecomendadoFragment"
+            app:destination="@id/recomendadoFragment" />
+        <action
+            android:id="@+id/action_usuarioFragment_self"
+            app:destination="@id/usuarioFragment" />
+    </fragment>
     <fragment
         android:id="@+id/atencionFragment"
         android:name="com.example.lahermandad.view.ui.fragments.AtencionclienteFragment"
