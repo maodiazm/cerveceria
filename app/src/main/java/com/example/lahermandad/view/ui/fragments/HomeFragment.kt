@@ -26,10 +26,10 @@ class HomeFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val cardNos = view.findViewById<ImageView>(R.id.cardnosotros)
+        val cardNos = view.findViewById<ImageView>(R.id.cardtienda)
 
         cardNos.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_NosotrosFragment)
+            findNavController().navigate(R.id.action_homeFragment_to_TiendaFragment)
         }
         val cardCom = view.findViewById<ImageView>(R.id.cardcomentarios)
 
@@ -41,10 +41,10 @@ class HomeFragment : Fragment() {
         cardComp.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_ComprasFragment)
         }
-        val cardDes = view.findViewById<ImageView>(R.id.cardlista)
+        val cardDes = view.findViewById<ImageView>(R.id.cardrecomendado)
 
         cardDes.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_DeseoFragment)
+            findNavController().navigate(R.id.action_homeFragment_to_RecomendadoFragment)
         }
         val cardGps = view.findViewById<ImageView>(R.id.cardubicacion)
 

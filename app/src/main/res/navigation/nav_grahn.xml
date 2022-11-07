@@ -11,14 +11,14 @@
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_NosotrosFragment"
-            app:destination="@id/nosotrosFragment" />
+            android:id="@+id/action_homeFragment_to_TiendaFragment"
+            app:destination="@id/tiendaFragment" />
         <action
             android:id="@+id/action_homeFragment_to_ComprasFragment"
             app:destination="@id/comprasFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_DeseoFragment"
-            app:destination="@id/deseoFragment" />
+            android:id="@+id/action_homeFragment_to_RecomendadoFragment"
+            app:destination="@id/recomendadoFragment" />
         <action
             android:id="@+id/action_homeFragment_to_ComentariosFragment"
             app:destination="@id/comentariosFragment" />
@@ -40,15 +40,37 @@
         android:label="fragment_compras"
         tools:layout="@layout/fragment_compras" />
     <fragment
-        android:id="@+id/deseoFragment"
-        android:name="com.example.lahermandad.view.ui.fragments.DeseoFragment"
+        android:id="@+id/recomendadoFragment"
+        android:name="com.example.lahermandad.view.ui.fragments.RecomendadoFragment"
         android:label="fragment_deseo"
-        tools:layout="@layout/fragment_deseo" />
+        tools:layout="@layout/fragment_recomendados" />
     <fragment
-        android:id="@+id/nosotrosFragment"
-        android:name="com.example.lahermandad.view.ui.fragments.NosotrosFragment"
+        android:id="@+id/tiendaFragment"
+        android:name="com.example.lahermandad.view.ui.fragments.TiendaFragment"
         android:label="fragment_nosotros"
-        tools:layout="@layout/fragment_nosotros" />
+        tools:layout="@layout/fragment_tienda" >
+        <action
+            android:id="@+id/action_tiendaFragment_to_UsuarioFragment"
+            app:destination="@id/usuarioFragment" />
+        <action
+            android:id="@+id/action_tiendaFragment_self"
+            app:destination="@id/tiendaFragment" />
+        <action
+            android:id="@+id/action_tiendaFragment_to_GpsFragment"
+            app:destination="@id/gpsFragment" />
+        <action
+            android:id="@+id/action_tiendaFragment_to_HomeFragment"
+            app:destination="@id/homeFragment" />
+        <action
+            android:id="@+id/action_tiendaFragment_to_RecomendadoFragment"
+            app:destination="@id/recomendadoFragment" />
+        <action
+            android:id="@+id/action_tiendaFragment_to_ComprasFragment"
+            app:destination="@id/comprasFragment" />
+        <action
+            android:id="@+id/action_tiendaFragment_to_atencionFragment"
+            app:destination="@id/atencionFragment" />
+    </fragment>
     <fragment
         android:id="@+id/gpsFragment"
         android:name="com.example.lahermandad.view.ui.fragments.GpsFragment"
@@ -59,4 +81,9 @@
         android:name="com.example.lahermandad.view.ui.fragments.UsuarioFragment"
         android:label="fragment_usuario"
         tools:layout="@layout/fragment_usuario" />
+    <fragment
+        android:id="@+id/atencionFragment"
+        android:name="com.example.lahermandad.view.ui.fragments.AtencionclienteFragment"
+        android:label="fragment_atencion_cliente"
+        tools:layout="@layout/fragment_atencion_cliente" />
 </navigation>

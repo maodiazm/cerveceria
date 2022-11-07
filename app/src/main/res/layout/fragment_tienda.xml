@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.ui.fragments.NosotrosFragment">
+    tools:context=".view.ui.fragments.TiendaFragment">
 
     <RelativeLayout
         android:id="@+id/encabezado"
@@ -44,6 +44,7 @@
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_marginTop="170dp"
+        android:layout_marginBottom="40dp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.0"
@@ -51,5 +52,22 @@
         app:layout_constraintTop_toBottomOf="@+id/encabezado">
 
     </androidx.recyclerview.widget.RecyclerView>
+
+    <com.google.android.material.bottomnavigation.BottomNavigationView
+        android:id="@+id/buttonNavigationMenu"
+        android:layout_width="wrap_content"
+        android:layout_height="55dp"
+        android:layout_marginTop="650dp"
+        android:background="@color/white"
+        app:itemIconTint="@color/color_secundario"
+        app:itemTextColor="@color/black"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintLeft_toLeftOf="parent"
+        app:layout_constraintRight_toRightOf="parent"
+        app:menu="@menu/menu_navigation_bar"
+        tools:ignore="MissingContrains">
+
+    </com.google.android.material.bottomnavigation.BottomNavigationView>
+
 
 </FrameLayout>
