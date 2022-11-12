@@ -29,7 +29,6 @@
         android:id="@+id/imageView3"
         android:layout_width="31dp"
         android:layout_height="745dp"
-        android:layout_marginStart="30dp"
         android:layout_marginTop="20dp"
         android:layout_marginBottom="30dp"
         android:adjustViewBounds="true"
@@ -40,7 +39,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="1.0"
-        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintStart_toStartOf="@+id/imageView5"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.384" />
 
@@ -79,11 +78,11 @@
 
 
     <EditText
-        android:id="@+id/correo"
+        android:id="@+id/correoelectronico"
         android:layout_width="243dp"
         android:layout_height="44dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="396dp"
         android:layout_marginEnd="80dp"
         android:background="@drawable/stylo_borde_editext2"
         android:ems="10"
@@ -93,17 +92,19 @@
         android:text="Correo Electrónico"
         android:textSize="20sp"
         android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.096"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/password"
+        android:id="@+id/contrasena"
         android:layout_width="244dp"
         android:layout_height="43dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="25dp"
         android:layout_marginEnd="100dp"
         android:background="@drawable/stylo_borde_editext2"
         android:ems="10"
@@ -113,13 +114,16 @@
         android:text="Contraseña"
         android:textSize="20sp"
         android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.515"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/correo"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.7"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <EditText
-        android:id="@+id/fechaNacimiento"
+        android:id="@+id/fechanacimiento"
         android:layout_width="243dp"
         android:layout_height="43dp"
         android:layout_marginStart="100dp"
@@ -133,9 +137,12 @@
         android:text="Fecha de Nacimiento"
         android:textSize="20sp"
         android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.375"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/password"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.782"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <Button
@@ -149,16 +156,18 @@
         android:text="Registrar"
         android:textColor="@color/white"
         android:textSize="16sp"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.754"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fechaNacimiento" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.923" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/nombreusuario"
         android:layout_width="240dp"
         android:layout_height="43dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="25dp"
         android:layout_marginEnd="80dp"
         android:background="@drawable/stylo_borde_editext2"
         android:ems="10"
@@ -168,9 +177,11 @@
         android:text="Nombre Completo"
         android:textSize="20sp"
         android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintHorizontal_bias="0.571"
+        app:layout_constraintHorizontal_bias="0.545"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/textView"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.526"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 </androidx.constraintlayout.widget.ConstraintLayout>

@@ -19,4 +19,50 @@
         app:navGraph="@navigation/nav_grahn">
     </fragment>
 
+    <ImageView
+        android:id="@+id/imageView4"
+        android:layout_width="358dp"
+        android:layout_height="556dp"
+        android:layout_marginStart="23dp"
+        android:layout_marginEnd="24dp"
+        app:layout_constraintBottom_toTopOf="@+id/textView2"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:srcCompat="@drawable/marca"
+        tools:visibility="visible" />
+
+    <TextView
+        android:id="@+id/textView2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="57dp"
+        android:layout_marginEnd="58dp"
+        android:layout_marginBottom="90dp"
+        android:gravity="center"
+        android:text="BIENVENIDOS "
+        android:fontFamily="@font/capsmall_clean"
+        android:textColor="@color/teal_700"
+        android:textSize="40sp"
+        android:textStyle="normal"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.505"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <TextView
+        android:id="@+id/textView3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="17dp"
+        android:layout_marginEnd="16dp"
+        android:layout_marginBottom="40dp"
+        android:gravity="center"
+        android:text="El lugar donde la cerveza y el arte se vuelven uno"
+        android:textColor="@color/color_secundario"
+        android:textSize="18sp"
+        android:textStyle="italic"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 </androidx.constraintlayout.widget.ConstraintLayout>

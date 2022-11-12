@@ -1,0 +1,39 @@
+{
+  "project_info": {
+    "project_number": "183110066570",
+    "project_id": "lahermandadapp",
+    "storage_bucket": "lahermandadapp.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:183110066570:android:ce11fdb537ea7f7c0b2873",
+        "android_client_info": {
+          "package_name": "com.example.lahermandad"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "183110066570-vlo62ktk7ah9s7sbm74v827k7ud4hj0p.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCTBYn4NQVpd_WB1soVLhTh9ZeauplVy3A"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "183110066570-vlo62ktk7ah9s7sbm74v827k7ud4hj0p.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

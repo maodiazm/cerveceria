@@ -54,7 +54,7 @@
         android:layout_height="64dp"
         android:layout_marginStart="158dp"
         android:layout_marginEnd="159dp"
-        android:layout_marginBottom="50dp"
+        android:layout_marginBottom="132dp"
         android:backgroundTint="@color/color_secundario"
         android:gravity="center"
         android:text="RESTAURAR"
@@ -65,7 +65,7 @@
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/correorestaurar"
         android:layout_width="285dp"
         android:layout_height="55dp"
         android:layout_alignParentStart="true"
@@ -73,18 +73,20 @@
         android:layout_alignParentBottom="true"
         android:layout_marginStart="75dp"
         android:layout_marginEnd="75dp"
-        android:layout_marginBottom="20dp"
+        android:layout_marginBottom="288dp"
         android:background="@drawable/stylo_borde_editext2"
         android:ems="10"
         android:fontFamily="@font/myriad_regular"
         android:gravity="center"
+        android:hint="Correo Electronico"
         android:inputType="textPersonName"
         android:text="Correo Electronico"
         android:textSize="25sp"
         android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName4"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintStart_toStartOf="parent"
+        tools:ignore="MissingConstraints" />
 
     <TextView
         android:id="@+id/textView"
@@ -92,7 +94,7 @@
         android:layout_height="58dp"
         android:layout_marginStart="50dp"
         android:layout_marginEnd="50dp"
-        android:layout_marginBottom="30dp"
+        android:layout_marginBottom="384dp"
         android:fontFamily="@font/capsmall_clean"
         android:gravity="center"
         android:shadowColor="@color/black"
@@ -103,8 +105,9 @@
         android:textColor="@color/color_secundario"
         android:textSize="32sp"
         android:textStyle="normal"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="parent" />
 
     <ImageView
@@ -112,59 +115,15 @@
         android:layout_width="261dp"
         android:layout_height="235dp"
         android:layout_marginStart="89dp"
-        android:layout_marginTop="30dp"
         android:layout_marginEnd="89dp"
         android:layout_marginBottom="10dp"
         android:contentDescription="logo cerveceria"
         android:scaleType="centerInside"
         android:src="@drawable/logo"
-        app:layout_constraintBottom_toTopOf="@+id/textView"
+        app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName3"
-        android:layout_width="285dp"
-        android:layout_height="55dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="75dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginBottom="40dp"
-        android:background="@drawable/stylo_borde_editext2"
-        android:ems="10"
-        android:fontFamily="@font/myriad_regular"
-        android:gravity="center"
-        android:inputType="textPersonName"
-        android:text="Confirmar Contraseña"
-        android:textSize="23sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/Recuperarbutton"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
-
-    <EditText
-        android:id="@+id/editTextTextPersonName4"
-        android:layout_width="285dp"
-        android:layout_height="54dp"
-        android:layout_alignParentStart="true"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentBottom="true"
-        android:layout_marginStart="75dp"
-        android:layout_marginEnd="75dp"
-        android:layout_marginBottom="20dp"
-        android:background="@drawable/stylo_borde_editext2"
-        android:ems="10"
-        android:fontFamily="@font/myriad_regular"
-        android:gravity="center"
-        android:inputType="textPersonName"
-        android:text="Nueva Contraseña"
-        android:textSize="25sp"
-        android:textStyle="italic"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName3"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintVertical_bias="0.076" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>

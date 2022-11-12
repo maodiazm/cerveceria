@@ -7,96 +7,56 @@
 
     <fragment
         android:id="@+id/homeFragment"
-        android:name="com.example.lahermandad.view.ui.fragments.HomeFragment"
+        android:name="com.example.lahermandad.view.ui.activities.fragments.HomeFragment"
         android:label="fragment_home"
         tools:layout="@layout/fragment_home" >
         <action
-            android:id="@+id/action_homeFragment_to_TiendaFragment"
-            app:destination="@id/tiendaFragment" />
+            android:id="@+id/action_homeFragment_to_nosotrosFragment"
+            app:destination="@id/nosotrosFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_ComprasFragment"
+            android:id="@+id/action_homeFragment_to_comprasFragment"
             app:destination="@id/comprasFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_RecomendadoFragment"
-            app:destination="@id/recomendadoFragment" />
+            android:id="@+id/action_homeFragment_to_deseoFragment"
+            app:destination="@id/deseoFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_ComentariosFragment"
+            android:id="@+id/action_homeFragment_to_comentariosFragment"
             app:destination="@id/comentariosFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_UsuarioFragment"
+            android:id="@+id/action_homeFragment_to_usuarioFragment2"
             app:destination="@id/usuarioFragment" />
         <action
-            android:id="@+id/action_homeFragment_to_GpsFragment"
+            android:id="@+id/action_homeFragment_to_gpsFragment"
             app:destination="@id/gpsFragment" />
     </fragment>
     <fragment
         android:id="@+id/comentariosFragment"
-        android:name="com.example.lahermandad.view.ui.fragments.ComentariosFragment"
+        android:name="com.example.lahermandad.view.ui.activities.fragments.comentariosFragment"
         android:label="fragment_comentarios"
         tools:layout="@layout/fragment_comentarios" />
     <fragment
         android:id="@+id/comprasFragment"
-        android:name="com.example.lahermandad.view.ui.fragments.ComprasFragment"
+        android:name="com.example.lahermandad.view.ui.activities.fragments.comprasFragment"
         android:label="fragment_compras"
         tools:layout="@layout/fragment_compras" />
     <fragment
-        android:id="@+id/recomendadoFragment"
-        android:name="com.example.lahermandad.view.ui.fragments.RecomendadoFragment"
+        android:id="@+id/deseoFragment"
+        android:name="com.example.lahermandad.view.ui.activities.fragments.deseoFragment"
         android:label="fragment_deseo"
-        tools:layout="@layout/fragment_recomendados" />
+        tools:layout="@layout/fragment_deseo" />
     <fragment
-        android:id="@+id/tiendaFragment"
-        android:name="com.example.lahermandad.view.ui.fragments.TiendaFragment"
+        android:id="@+id/nosotrosFragment"
+        android:name="com.example.lahermandad.view.ui.activities.fragments.nosotrosFragment"
         android:label="fragment_nosotros"
-        tools:layout="@layout/fragment_tienda" >
-        <action
-            android:id="@+id/action_tiendaFragment_to_UsuarioFragment"
-            app:destination="@id/usuarioFragment" />
-        <action
-            android:id="@+id/action_tiendaFragment_self"
-            app:destination="@id/tiendaFragment" />
-        <action
-            android:id="@+id/action_tiendaFragment_to_GpsFragment"
-            app:destination="@id/gpsFragment" />
-        <action
-            android:id="@+id/action_tiendaFragment_to_HomeFragment"
-            app:destination="@id/homeFragment" />
-        <action
-            android:id="@+id/action_tiendaFragment_to_RecomendadoFragment"
-            app:destination="@id/recomendadoFragment" />
-        <action
-            android:id="@+id/action_tiendaFragment_to_ComprasFragment"
-            app:destination="@id/comprasFragment" />
-    </fragment>
+        tools:layout="@layout/fragment_nosotros" />
     <fragment
         android:id="@+id/gpsFragment"
-        android:name="com.example.lahermandad.view.ui.fragments.GpsFragment"
+        android:name="com.example.lahermandad.view.ui.activities.fragments.gpsFragment"
         android:label="fragment_gps"
         tools:layout="@layout/fragment_gps" />
     <fragment
         android:id="@+id/usuarioFragment"
-        android:name="com.example.lahermandad.view.ui.fragments.UsuarioFragment"
+        android:name="com.example.lahermandad.view.ui.activities.fragments.usuarioFragment"
         android:label="fragment_usuario"
-        tools:layout="@layout/fragment_usuario" >
-        <action
-            android:id="@+id/action_usuarioFragment_to_TiendaFragment"
-            app:destination="@id/tiendaFragment" />
-        <action
-            android:id="@+id/action_usuarioFragment_to_GpsFragment"
-            app:destination="@id/gpsFragment" />
-        <action
-            android:id="@+id/action_usuarioFragment_to_HomeFragment"
-            app:destination="@id/homeFragment" />
-        <action
-            android:id="@+id/action_usuarioFragment_to_RecomendadoFragment"
-            app:destination="@id/recomendadoFragment" />
-        <action
-            android:id="@+id/action_usuarioFragment_self"
-            app:destination="@id/usuarioFragment" />
-    </fragment>
-    <fragment
-        android:id="@+id/atencionFragment"
-        android:name="com.example.lahermandad.view.ui.fragments.AtencionclienteFragment"
-        android:label="fragment_atencion_cliente"
-        tools:layout="@layout/fragment_atencion_cliente" />
+        tools:layout="@layout/fragment_usuario" />
 </navigation>
