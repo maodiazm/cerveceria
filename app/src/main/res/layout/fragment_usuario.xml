@@ -57,8 +57,8 @@
         android:background="@drawable/stylo_borde_editext"
         android:fontFamily="@font/myriad_regular"
         android:gravity="center"
+        android:hint="Nombre"
         android:inputType="textPersonName"
-        android:text="Nombre"
         android:textIsSelectable="false"
         tools:ignore="TouchTargetSizeCheck">
 
@@ -97,8 +97,8 @@
         android:background="@drawable/stylo_borde_editext"
         android:fontFamily="@font/myriad_regular"
         android:gravity="center"
+        android:hint="Correo"
         android:inputType="textEmailAddress"
-        android:text="Correo"
         android:textIsSelectable="false"
         tools:ignore="TouchTargetSizeCheck">
 
@@ -137,8 +137,8 @@
         android:background="@drawable/stylo_borde_editext"
         android:fontFamily="@font/myriad_regular"
         android:gravity="center"
+        android:hint="Direccion"
         android:inputType="text"
-        android:text="Direccion"
         android:textIsSelectable="false"
         tools:ignore="TouchTargetSizeCheck">
 

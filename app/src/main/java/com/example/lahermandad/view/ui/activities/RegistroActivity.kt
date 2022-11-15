@@ -22,7 +22,7 @@ class RegistroActivity : AppCompatActivity() {
         val correo=findViewById<EditText>(R.id.correo)
         val contrasena=findViewById<EditText>(R.id.password)
         val nuevonombre=findViewById<EditText>(R.id.nombreCompleto)
-        val contraseñaconfirmar=findViewById<EditText>(R.id.nombreCompleto)
+        val contraseñaconfirmar=findViewById<EditText>(R.id.confcont)
 
 
         registrobutton.setOnClickListener {
