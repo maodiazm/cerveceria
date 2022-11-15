@@ -22,13 +22,10 @@ class UsuarioFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val buttom = view.findViewById<BottomNavigationView>(R.id.buttonNavigationMenu)
+        val buttom = view.findViewById<BottomNavigationView>(R.id.buttonNavigationHome)
         buttom.setOnNavigationItemReselectedListener {
             when(it.itemId){
                 R.id.home -> findNavController().navigate(R.id.action_usuarioFragment_to_HomeFragment)
-                R.id.tienda -> findNavController().navigate(R.id.action_usuarioFragment_to_TiendaFragment)
-                R.id.recomendado -> findNavController().navigate(R.id.action_usuarioFragment_to_RecomendadoFragment)
-                R.id.mapa -> findNavController().navigate(R.id.action_usuarioFragment_to_GpsFragment)
             }
         }
 

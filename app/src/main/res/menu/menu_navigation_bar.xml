@@ -21,10 +21,6 @@
         android:title="Mapa"
         android:icon="@drawable/mapa">
     </item>
-    <item
-        android:id="@+id/perfil"
-        android:title="Perfil"
-        android:icon="@drawable/perfil">
-    </item>
+
 
 </menu>

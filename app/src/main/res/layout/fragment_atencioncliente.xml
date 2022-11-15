@@ -4,7 +4,7 @@
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".view.ui.fragments.ComentariosFragment">
+    tools:context=".view.ui.fragments.AtencionclienteFragment">
 
     <!-- TODO: Update blank fragment layout -->
     <TextView

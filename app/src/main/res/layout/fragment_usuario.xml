@@ -159,8 +159,8 @@
 
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/buttonNavigationMenu"
-        android:layout_width="wrap_content"
+        android:id="@+id/buttonNavigationHome"
+        android:layout_width="match_parent"
         android:layout_height="55dp"
         android:layout_marginTop="650dp"
         android:background="@color/white"
@@ -169,7 +169,7 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintLeft_toLeftOf="parent"
         app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/menu_navigation_bar"
+        app:menu="@menu/home_navigation_bar"
         tools:ignore="MissingContrains">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>

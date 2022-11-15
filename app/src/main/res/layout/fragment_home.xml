@@ -38,7 +38,7 @@
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:alignmentMode="alignMargins"
-                android:columnCount="2"
+                android:columnCount="1"
                 android:columnOrderPreserved="false"
                 android:rowCount="3">
 
@@ -56,19 +56,20 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical"
-                        android:padding="16dp">
+                        android:padding="3dp">
 
                         <ImageView
                             android:id="@+id/cardtienda"
                             android:layout_width="100dp"
-                            android:layout_height="115dp"
+                            android:layout_height="110dp"
                             android:contentDescription="@string/shop"
-                            android:src="@drawable/nosotros">
+                            android:src="@drawable/marca">
 
                         </ImageView>
                     </LinearLayout>
 
                 </androidx.cardview.widget.CardView>
+
 
                 <androidx.cardview.widget.CardView
                     android:layout_width="wrap_content"
@@ -84,68 +85,14 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical"
-                        android:padding="16dp">
-
-                        <ImageView
-                            android:id="@+id/cardcomentarios"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:contentDescription="@string/comentarios"
-                            android:src="@drawable/comentarios_home">
-
-                        </ImageView>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="12dp"
-                    app:cardCornerRadius="5dp"
-                    app:cardElevation="5dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="16dp">
-
-                        <ImageView
-                            android:id="@+id/cardcompras"
-                            android:layout_width="100dp"
-                            android:layout_height="100dp"
-                            android:contentDescription="@string/compras"
-                            android:src="@drawable/compras_home">
-
-                        </ImageView>
-                    </LinearLayout>
-                </androidx.cardview.widget.CardView>
-
-                <androidx.cardview.widget.CardView
-                    android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"
-                    android:layout_rowWeight="1"
-                    android:layout_columnWeight="1"
-                    android:layout_margin="12dp"
-                    app:cardCornerRadius="5dp"
-                    app:cardElevation="5dp">
-
-                    <LinearLayout
-                        android:layout_width="match_parent"
-                        android:layout_height="match_parent"
-                        android:gravity="center"
-                        android:orientation="vertical"
-                        android:padding="16dp">
+                        android:padding="3dp">
 
                         <ImageView
                             android:id="@+id/cardubicacion"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:contentDescription="@string/ubicacion_del_pedido"
-                            android:src="@drawable/gps_home">
+                            android:src="@drawable/map">
 
                         </ImageView>
                     </LinearLayout>
@@ -165,14 +112,14 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical"
-                        android:padding="16dp">
+                        android:padding="3dp">
 
                         <ImageView
                             android:id="@+id/cardrecomendado"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
                             android:contentDescription="@string/Recomendados"
-                            android:src="@drawable/lista_deseo">
+                            android:src="@drawable/recomendated">
 
                         </ImageView>
                     </LinearLayout>
@@ -192,14 +139,14 @@
                         android:layout_height="match_parent"
                         android:gravity="center"
                         android:orientation="vertical"
-                        android:padding="16dp">
+                        android:padding="3dp">
 
                         <ImageView
-                            android:id="@+id/cardusuarios"
+                            android:id="@+id/cardcomentarios"
                             android:layout_width="100dp"
                             android:layout_height="100dp"
-                            android:contentDescription="@string/usuario"
-                            android:src="@drawable/usuario_home">
+                            android:contentDescription="@string/comentarios"
+                            android:src="@drawable/calification">
 
                         </ImageView>
                     </LinearLayout>
@@ -208,23 +155,7 @@
             </GridLayout>
         </ScrollView>
 
-        <TextView
-            android:id="@+id/textView4"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:layout_marginStart="57dp"
-            android:layout_marginEnd="55dp"
-            android:layout_marginBottom="-5dp"
-            android:fontFamily="@font/capsmall_clean"
-            android:gravity="center"
-            android:text="BIENVENIDOS "
-            android:textColor="@color/teal_700"
-            android:textSize="40sp"
-            android:textStyle="normal"
-            app:layout_constraintBottom_toBottomOf="parent"
-            app:layout_constraintEnd_toEndOf="parent"
-            app:layout_constraintHorizontal_bias="0.511"
-            app:layout_constraintStart_toStartOf="parent" />
+
 
         <TextView
             android:id="@+id/textView2"
@@ -244,5 +175,13 @@
             app:layout_constraintStart_toStartOf="parent"
             tools:ignore="MissingConstraints" />
     </LinearLayout>
+
+    <androidx.appcompat.widget.Toolbar
+        android:id="@+id/toolbar"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        >
+
+    </androidx.appcompat.widget.Toolbar>
 
 </LinearLayout>

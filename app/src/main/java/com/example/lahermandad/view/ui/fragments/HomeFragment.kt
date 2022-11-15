@@ -1,18 +1,22 @@
 package com.example.lahermandad.view.ui.fragments
 
 import android.os.Bundle
+import android.view.*
 import androidx.fragment.app.Fragment
-import android.view.LayoutInflater
-import android.view.View
-import android.view.ViewGroup
 import android.widget.ImageView
+import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.example.lahermandad.R
-import java.util.ArrayList
+
 
 
 class HomeFragment : Fragment() {
 
+
+    override fun onCreate(savedInstanceState: Bundle?) {
+        super.onCreate(savedInstanceState)
+        setHasOptionsMenu(true)
+    }
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
@@ -21,6 +25,29 @@ class HomeFragment : Fragment() {
         val view=inflater.inflate(R.layout.fragment_home, container, false)
 
         return view
+    }
+    override fun onOptionsItemSelected(item: MenuItem): Boolean {
+        return when (item.itemId){
+            R.id.perfil->{
+                findNavController().navigate(R.id.action_homeFragment_to_UsuarioFragment)
+                true
+            }
+            R.id.ayuda->{
+                findNavController().navigate(R.id.action_homeFragment_to_atencionFragment)
+                true
+            }
+            R.id.historial->{
+                findNavController().navigate(R.id.action_homeFragment_to_ComprasFragment)
+                true
+            }
+
+            else -> super.onOptionsItemSelected(item)
+        }
+
+    }
+    override fun onCreateOptionsMenu(menu: Menu, inflater: MenuInflater) {
+        inflater.inflate(R.menu.menu_navigation_toolbar, menu)
+        super.onCreateOptionsMenu(menu, inflater)
     }
 
 
@@ -36,11 +63,7 @@ class HomeFragment : Fragment() {
         cardCom.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_ComentariosFragment)
         }
-        val cardComp = view.findViewById<ImageView>(R.id.cardcompras)
 
-        cardComp.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_ComprasFragment)
-        }
         val cardDes = view.findViewById<ImageView>(R.id.cardrecomendado)
 
         cardDes.setOnClickListener {
@@ -51,11 +74,7 @@ class HomeFragment : Fragment() {
         cardGps.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_GpsFragment)
         }
-        val cardUs = view.findViewById<ImageView>(R.id.cardusuarios)
 
-        cardUs.setOnClickListener {
-            findNavController().navigate(R.id.action_homeFragment_to_UsuarioFragment)
-        }
     }
 
 }

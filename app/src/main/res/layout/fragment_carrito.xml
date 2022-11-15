@@ -30,7 +30,7 @@
             android:layout_marginStart="9dp"
             android:layout_marginEnd="81dp"
             android:gravity="center"
-            android:text="Historial De Pedidos"
+            android:text="Carrito De Compras"
             android:textStyle="normal"
             android:textColor="@color/white"
             android:fontFamily="@font/capsmall_clean"
@@ -38,20 +38,5 @@
 
         </TextView>
     </RelativeLayout>
-    <com.google.android.material.bottomnavigation.BottomNavigationView
-        android:id="@+id/buttonNavigationHome"
-        android:layout_width="match_parent"
-        android:layout_height="55dp"
-        android:layout_marginTop="650dp"
-        android:background="@color/white"
-        app:itemIconTint="@color/color_secundario"
-        app:itemTextColor="@color/black"
-        app:layout_constraintBottom_toBottomOf="parent"
-        app:layout_constraintLeft_toLeftOf="parent"
-        app:layout_constraintRight_toRightOf="parent"
-        app:menu="@menu/home_navigation_bar"
-        tools:ignore="MissingContrains">
-
-    </com.google.android.material.bottomnavigation.BottomNavigationView>
 
 </FrameLayout>

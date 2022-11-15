@@ -9,16 +9,11 @@ import androidx.navigation.fragment.findNavController
 import com.example.lahermandad.R
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
-class AtencionclienteFragment : Fragment() {
+
+class CarritoFragment : Fragment() {
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
         super.onViewCreated(view, savedInstanceState)
-        val buttom = view.findViewById<BottomNavigationView>(R.id.buttonNavigationHome)
-        buttom.setOnNavigationItemReselectedListener {
-            when(it.itemId){
-                R.id.home -> findNavController().navigate(R.id.action_atencionFragment_to_homeFragment)
-            }
-        }
 
     }
 
@@ -27,7 +22,7 @@ class AtencionclienteFragment : Fragment() {
         savedInstanceState: Bundle?
     ): View? {
         // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_atencioncliente, container, false)
+        return inflater.inflate(R.layout.fragment_carrito, container, false)
     }
 
 
