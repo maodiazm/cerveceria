@@ -3,11 +3,13 @@ package com.example.lahermandad.view.ui.activities
 import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
+import android.view.LayoutInflater
 import android.widget.Button
 import android.widget.EditText
 import android.widget.TextView
 import android.widget.Toast
 import com.example.lahermandad.R
+import com.example.lahermandad.databinding.ActivityMainBinding
 import com.google.android.gms.tasks.Task
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
@@ -21,11 +23,10 @@ class login : AppCompatActivity() {
     lateinit var recuperarbutton : TextView
     private lateinit var firebaseAuth: FirebaseAuth
 
-
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
+
         firebaseAuth = Firebase.auth
 
         iniciobutton=findViewById(R.id.Binicio)
@@ -63,5 +64,5 @@ class login : AppCompatActivity() {
             }
         }
 
-}
+    }
 }
