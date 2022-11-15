@@ -22,6 +22,7 @@ class login : AppCompatActivity() {
     private lateinit var firebaseAuth: FirebaseAuth
 
 
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_login)
@@ -50,10 +51,15 @@ class login : AppCompatActivity() {
             .addOnCompleteListener(this) {
                     task-> if(task.isSuccessful){
                 val user = firebaseAuth.currentUser
-                Toast.makeText(baseContext,user?.uid.toString(), Toast.LENGTH_SHORT).show()
+                val verifica = user?.isEmailVerified
+                if (verifica == true){
+                Toast.makeText(baseContext,"Autenticación Exitosa", Toast.LENGTH_SHORT).show()
                 startActivity(Intent( this, HomeActivity::class.java ))
+                }else{
+                    Toast.makeText(baseContext,"No ha verificado su correo",Toast.LENGTH_SHORT).show()
+                }
             }else{
-                Toast.makeText(baseContext,"Error en Usuario o Contraseña", Toast.LENGTH_SHORT).show()
+                Toast.makeText(baseContext,"Error de Usuario o Contraseña", Toast.LENGTH_SHORT).show()
             }
         }
 

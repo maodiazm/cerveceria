@@ -31,6 +31,9 @@
         <action
             android:id="@+id/action_homeFragment_to_atencionFragment"
             app:destination="@id/atencionFragment" />
+        <action
+            android:id="@+id/action_homeFragment_to_login"
+            app:destination="@id/login" />
     </fragment>
     <fragment
         android:id="@+id/comentariosFragment"
@@ -126,4 +129,9 @@
             app:destination="@id/tiendaFragment" />
 
     </fragment>
+    <activity
+        android:id="@+id/login"
+        android:name="com.example.lahermandad.view.ui.activities.login"
+        android:label="activity_login"
+        tools:layout="@layout/activity_login" />
 </navigation>

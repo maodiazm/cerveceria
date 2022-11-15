@@ -89,13 +89,13 @@
         android:ems="10"
         android:fontFamily="@font/myriad_regular"
         android:gravity="center"
+        android:hint="Correo Electronico"
         android:inputType="textEmailAddress"
-        android:text="Correo Electrónico"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName5"
+        app:layout_constraintTop_toBottomOf="@+id/nombreCompleto"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
     <EditText
@@ -109,8 +109,8 @@
         android:ems="10"
         android:fontFamily="@font/myriad_regular"
         android:gravity="center"
+        android:hint="Contraseña"
         android:inputType="textPassword"
-        android:text="Contraseña"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
@@ -120,7 +120,7 @@
 
 
     <EditText
-        android:id="@+id/fechaNacimiento"
+        android:id="@+id/confcont"
         android:layout_width="243dp"
         android:layout_height="43dp"
         android:layout_marginStart="100dp"
@@ -130,14 +130,16 @@
         android:ems="10"
         android:fontFamily="@font/myriad_regular"
         android:gravity="center"
-        android:inputType="date"
-        android:text="Fecha de Nacimiento"
+        android:hint="Confirmar Contraseña"
+        android:inputType="textPassword"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/password"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+
 
     <Button
         android:id="@+id/registrobutton"
@@ -152,10 +154,10 @@
         android:textSize="16sp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/fechaNacimiento" />
+        app:layout_constraintTop_toBottomOf="@+id/confcont" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName5"
+        android:id="@+id/nombreCompleto"
         android:layout_width="240dp"
         android:layout_height="43dp"
         android:layout_marginStart="80dp"
@@ -165,8 +167,8 @@
         android:ems="10"
         android:fontFamily="@font/myriad_regular"
         android:gravity="center"
+        android:hint="Nombre Completo"
         android:inputType="textPersonName"
-        android:text="Nombre Completo"
         android:textSize="20sp"
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"

@@ -7,15 +7,20 @@ import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.navigation.fragment.findNavController
 import com.example.lahermandad.R
-
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 
 class HomeFragment : Fragment() {
+
+    lateinit var firebaseAuth: FirebaseAuth
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setHasOptionsMenu(true)
+        firebaseAuth= Firebase.auth
     }
 
     override fun onCreateView(
@@ -40,7 +45,11 @@ class HomeFragment : Fragment() {
                 findNavController().navigate(R.id.action_homeFragment_to_ComprasFragment)
                 true
             }
-
+            R.id.salir->{
+                firebaseAuth.signOut()
+                findNavController().navigate(R.id.action_homeFragment_to_login)
+                true
+            }
             else -> super.onOptionsItemSelected(item)
         }
 
