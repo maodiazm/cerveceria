@@ -18,13 +18,13 @@
         android:layout_marginStart="108dp"
         android:layout_marginEnd="109dp"
         android:layout_marginBottom="30dp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName"
+        app:layout_constraintBottom_toTopOf="@+id/correolog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:srcCompat="@drawable/logo" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/correolog"
         android:layout_width="wrap_content"
         android:layout_height="63dp"
         android:layout_alignParentStart="true"
@@ -36,15 +36,15 @@
         android:ems="10"
         android:fontFamily="@font/myriad_regular"
         android:gravity="center"
-        android:inputType="textPersonName"
-        android:text="USUARIO"
+        android:inputType="textEmailAddress"
+        android:text="CORREO"
         android:textSize="25sp"
-        app:layout_constraintBottom_toTopOf="@+id/editTextTextPersonName2"
+        app:layout_constraintBottom_toTopOf="@+id/contrasenalog"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName2"
+        android:id="@+id/contrasenalog"
         android:layout_width="300dp"
         android:layout_height="62dp"
         android:layout_alignParentStart="true"
@@ -56,7 +56,7 @@
         android:ems="10"
         android:fontFamily="@font/myriad_regular"
         android:gravity="center"
-        android:inputType="textPersonName"
+        android:inputType="textPassword"
         android:text="CONTRASEÑA"
         android:textSize="22sp"
         app:layout_constraintBottom_toTopOf="@+id/Binicio"
