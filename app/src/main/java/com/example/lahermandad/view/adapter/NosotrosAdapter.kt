@@ -1,6 +1,7 @@
 package com.example.lahermandad.view.adapter
 
 import android.annotation.SuppressLint
+import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
@@ -9,42 +10,42 @@ import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 import androidx.recyclerview.widget.RecyclerView.ViewHolder
 import com.example.lahermandad.R
+import com.example.lahermandad.model.cervezas
+import com.squareup.picasso.Picasso
 
-class NosotrosAdapter: RecyclerView.Adapter<NosotrosAdapter.ViewHolder>(){
+class NosotrosAdapter(private val context: Context): RecyclerView.Adapter<NosotrosAdapter.ViewHolder>(){
+    private var beerlista = mutableListOf<cervezas>()
 
+    fun setListData(data:MutableList<cervezas>){
+        beerlista = data
+    }
+
+    @SuppressLint("SuspiciousIndentation")
     override fun onCreateViewHolder(ViewGroup: ViewGroup, i:Int): ViewHolder{
     val v = LayoutInflater.from(ViewGroup.context).inflate(R.layout.card_view_nosotros,ViewGroup, false)
         return ViewHolder(v)
     }
 
- inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView){
-    var itemImage: ImageView
-    var itemTitle: TextView
-    var itemPrecio: TextView
-    var itemGrado: TextView
-
-    init{
-        itemImage = itemView.findViewById(R.id.image1)
-        itemTitle = itemView.findViewById(R.id.title)
-        itemPrecio = itemView.findViewById(R.id.precio)
-        itemGrado = itemView.findViewById(R.id.grado)
-        }
-    }
-
-    val titles = arrayOf ("Cerveza Boiler","Cerveza Goblin","Cerveza Gold Pot", "Cerveza Chaos")
-    val precios = arrayOf("$5500","S4800","$5200","$5800")
-    val grados = arrayOf("4,5% Grados","5,2% Grados","4,7% Grados","5,5% Grados")
-    val image = arrayOf(R.drawable.boiler,R.drawable.goblin,R.drawable.golpot,R.drawable.chaos)
+ inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
+     fun binWeb(cerveza: cervezas){
+         itemView.findViewById<TextView>(R.id.title).text=cerveza.titulo
+         itemView.findViewById<TextView>(R.id.precio).text=cerveza.precio
+         itemView.findViewById<TextView>(R.id.grado).text=cerveza.grado
+         Picasso.with(context).load(cerveza.image).into(itemView.findViewById<ImageView>(R.id.image1))
+     }
+ }
 
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
-        viewHolder.itemTitle.text= titles[i]
-        viewHolder.itemGrado.text= grados[i]
-        viewHolder.itemPrecio.text= precios[i]
-        viewHolder.itemImage.setImageResource(image[i])
+        val cerveza=beerlista[i]
+        viewHolder.binWeb(cerveza)
     }
 
     override fun getItemCount(): Int {
-        return titles.size
+        return if(beerlista.size > 0){
+            beerlista.size
+        }else{
+            0
+        }
     }
 }

@@ -5,32 +5,56 @@ import android.view.*
 import android.widget.ImageView
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
+import androidx.lifecycle.Observer
+import androidx.lifecycle.ViewModel
+import androidx.lifecycle.ViewModelProvider
+import androidx.lifecycle.get
 import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lahermandad.R
 import com.example.lahermandad.view.adapter.NosotrosAdapter
+import com.example.lahermandad.viewmodel.BeerViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
+import com.google.firebase.auth.FirebaseAuth
+import com.google.firebase.auth.ktx.auth
+import com.google.firebase.ktx.Firebase
 
 
 class TiendaFragment : Fragment() {
 
+    lateinit var adapter: NosotrosAdapter
+    lateinit var firebaseAuth: FirebaseAuth
+    private val viewModel by lazy { ViewModelProvider(this).get(BeerViewModel::class.java) }
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        setHasOptionsMenu(true)
+        firebaseAuth = Firebase.auth
     }
 
     lateinit var recyclerNos: RecyclerView
+
+
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
         val view = inflater.inflate(R.layout.fragment_tienda, container, false)
         recyclerNos = view.findViewById(R.id.recyclerview)
-        val adapter = NosotrosAdapter()
+        adapter = NosotrosAdapter(requireContext())
         recyclerNos.layoutManager = LinearLayoutManager(context)
         recyclerNos.adapter = adapter
+
+        observeData()
+
         return view
+    }
+    fun observeData(){
+        viewModel.BeerData().observe(viewLifecycleOwner,Observer{
+            adapter.setListData(it)
+            adapter.notifyDataSetChanged()
+        })
+
     }
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
