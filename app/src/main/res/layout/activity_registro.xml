@@ -61,7 +61,6 @@
         android:layout_width="183dp"
         android:layout_height="43dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="20dp"
         android:layout_marginEnd="100dp"
         android:fontFamily="@font/capsmall_clean"
         android:gravity="center"
@@ -83,7 +82,7 @@
         android:layout_width="243dp"
         android:layout_height="44dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="80dp"
         android:background="@drawable/stylo_borde_editext2"
         android:ems="10"
@@ -103,7 +102,7 @@
         android:layout_width="244dp"
         android:layout_height="43dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="100dp"
         android:background="@drawable/stylo_borde_editext2"
         android:ems="10"
@@ -115,7 +114,7 @@
         android:textStyle="italic"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/correo"
+        app:layout_constraintTop_toBottomOf="@+id/FechaN"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
 
@@ -124,7 +123,7 @@
         android:layout_width="243dp"
         android:layout_height="43dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="100dp"
         android:background="@drawable/stylo_borde_editext2"
         android:ems="10"
@@ -140,13 +139,12 @@
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
 
 
-
     <Button
         android:id="@+id/registrobutton"
         android:layout_width="154dp"
         android:layout_height="62dp"
         android:layout_marginStart="100dp"
-        android:layout_marginTop="30dp"
+        android:layout_marginTop="35dp"
         android:layout_marginEnd="100dp"
         android:backgroundTint="@color/color_secundario"
         android:text="Registrar"
@@ -161,7 +159,7 @@
         android:layout_width="240dp"
         android:layout_height="43dp"
         android:layout_marginStart="80dp"
-        android:layout_marginTop="25dp"
+        android:layout_marginTop="20dp"
         android:layout_marginEnd="80dp"
         android:background="@drawable/stylo_borde_editext2"
         android:ems="10"
@@ -176,6 +174,27 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/textView"
         tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
+    <EditText
+        android:id="@+id/FechaN"
+        android:layout_width="243dp"
+        android:layout_height="43dp"
+        android:layout_marginStart="100dp"
+        android:layout_marginTop="20dp"
+        android:layout_marginEnd="100dp"
+        android:background="@drawable/stylo_borde_editext2"
+        android:ems="10"
+        android:fontFamily="@font/myriad_regular"
+        android:gravity="center"
+        android:hint="Fecha De Nacimiento"
+        android:inputType="date"
+        android:textSize="20sp"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/correo"
+        tools:ignore="TouchTargetSizeCheck,TouchTargetSizeCheck" />
+
 
 
 
