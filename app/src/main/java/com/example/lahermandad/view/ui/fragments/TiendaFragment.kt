@@ -24,12 +24,11 @@ import com.google.firebase.ktx.Firebase
 class TiendaFragment : Fragment() {
 
     lateinit var adapter: NosotrosAdapter
-    lateinit var firebaseAuth: FirebaseAuth
     private val viewModel by lazy { ViewModelProvider(this).get(BeerViewModel::class.java) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
-        firebaseAuth = Firebase.auth
+        setHasOptionsMenu(true)
     }
 
     lateinit var recyclerNos: RecyclerView
