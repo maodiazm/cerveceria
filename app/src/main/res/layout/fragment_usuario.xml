@@ -5,36 +5,41 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".view.ui.fragments.UsuarioFragment">
-    
+
     <ImageView
         android:id="@+id/foto_perfil"
+        android:layout_width="180dp"
+        android:layout_height="180dp"
+        android:layout_marginStart="115dp"
         android:layout_marginTop="15dp"
-        android:layout_marginLeft="15dp"
-        android:layout_width="250dp"
-        android:layout_height="220dp"
-        android:src="@drawable/perfilx">
+        android:src="@drawable/profileimage">
+
     </ImageView>
 
     <Button
         android:id="@+id/botoncamara"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="50dp"
-        android:layout_marginLeft="280dp"
-        android:backgroundTint="@color/color_secundario"
+        android:layout_width="80dp"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        android:textSize="10sp"
+        android:layout_marginStart="120dp"
+        android:backgroundTint="@color/purple_700"
         android:text="Camara"
-        android:fontFamily="@font/myriad_semibold">
+        android:fontFamily="@font/myriad_semibold"
+        tools:ignore="SmallSp">
     </Button>
 
     <Button
         android:id="@+id/botongaleria"
-        android:layout_width="100dp"
-        android:layout_height="60dp"
-        android:layout_marginTop="150dp"
-        android:layout_marginLeft="280dp"
+        android:layout_width="80dp"
+        android:textSize="10sp"
+        android:layout_height="50dp"
+        android:layout_marginTop="200dp"
+        android:layout_marginStart="210dp"
         android:backgroundTint="@color/fondo_inicio"
         android:text="Galeria"
-        android:fontFamily="@font/myriad_semibold">
+        android:fontFamily="@font/myriad_semibold"
+        tools:ignore="SmallSp">
     </Button>
 
     <TextView

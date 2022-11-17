@@ -10,7 +10,7 @@
         android:id="@+id/encabezado"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="32dp"
+        android:layout_marginTop="25dp"
         android:layout_marginRight="20dp"
         android:layout_marginLeft="20dp"
         android:background="@drawable/theme_gradients_background">
@@ -19,7 +19,7 @@
             android:layout_width="111dp"
             android:layout_height="120dp"
             android:layout_alignParentRight="true"
-            android:src="@drawable/logo">
+            android:src="@drawable/recomendado">
 
         </ImageView>
         <TextView
@@ -27,14 +27,14 @@
             android:layout_height="115dp"
             android:layout_alignParentStart="true"
             android:layout_alignParentEnd="true"
-            android:layout_marginStart="8dp"
+            android:layout_marginStart="0dp"
             android:layout_marginEnd="81dp"
             android:gravity="center"
-            android:text="Recomendados"
+            android:text="Recomendado"
             android:textStyle="normal"
-            android:textColor="@color/white"
+            android:textColor="@color/black"
             android:fontFamily="@font/capsmall_clean"
-            android:textSize="35sp">
+            android:textSize="30sp">
 
         </TextView>
     </RelativeLayout>
