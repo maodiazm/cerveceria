@@ -5,6 +5,7 @@ import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
+import android.widget.ImageButton
 import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
@@ -13,7 +14,7 @@ import com.example.lahermandad.R
 import com.example.lahermandad.model.cervezas
 import com.squareup.picasso.Picasso
 
-class NosotrosAdapter(private val context: Context): RecyclerView.Adapter<NosotrosAdapter.ViewHolder>(){
+class NosotrosAdapter(private val context: Context, var clickListener: OnBookItemClickListener): RecyclerView.Adapter<NosotrosAdapter.ViewHolder>(){
     private var beerlista = mutableListOf<cervezas>()
 
     fun setListData(data:MutableList<cervezas>){
@@ -27,18 +28,22 @@ class NosotrosAdapter(private val context: Context): RecyclerView.Adapter<Nosotr
     }
 
  inner class ViewHolder(itemView: View): RecyclerView.ViewHolder(itemView) {
-     fun binWeb(cerveza: cervezas){
+     fun binWeb(cerveza: cervezas, action:OnBookItemClickListener){
          itemView.findViewById<TextView>(R.id.title).text=cerveza.titulo
          itemView.findViewById<TextView>(R.id.precio).text=cerveza.precio
          itemView.findViewById<TextView>(R.id.grado).text=cerveza.grado
          Picasso.with(context).load(cerveza.image).into(itemView.findViewById<ImageView>(R.id.image1))
+         val btncerveza=itemView.findViewById<ImageButton>(R.id.carrito)
+         btncerveza.setOnClickListener{
+             action.onItemclick(cerveza, adapterPosition)
+         }
      }
  }
 
 
     override fun onBindViewHolder(viewHolder: ViewHolder, i: Int) {
         val cerveza=beerlista[i]
-        viewHolder.binWeb(cerveza)
+        viewHolder.binWeb(cerveza, clickListener)
     }
 
     override fun getItemCount(): Int {
@@ -48,4 +53,7 @@ class NosotrosAdapter(private val context: Context): RecyclerView.Adapter<Nosotr
             0
         }
     }
+}
+interface OnBookItemClickListener{
+    fun onItemclick(cerveza: cervezas, position: Int)
 }

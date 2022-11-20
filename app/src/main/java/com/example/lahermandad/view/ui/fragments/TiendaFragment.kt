@@ -3,6 +3,7 @@ package com.example.lahermandad.view.ui.fragments
 import android.os.Bundle
 import android.view.*
 import android.widget.ImageView
+import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.fragment.app.Fragment
 import androidx.lifecycle.Observer
@@ -13,17 +14,23 @@ import androidx.navigation.fragment.findNavController
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.lahermandad.R
+import com.example.lahermandad.model.cervezas
 import com.example.lahermandad.view.adapter.NosotrosAdapter
+import com.example.lahermandad.view.adapter.OnBookItemClickListener
 import com.example.lahermandad.viewmodel.BeerViewModel
 import com.google.android.material.bottomnavigation.BottomNavigationView
 import com.google.firebase.auth.FirebaseAuth
 import com.google.firebase.auth.ktx.auth
+import com.google.firebase.firestore.FirebaseFirestore
 import com.google.firebase.ktx.Firebase
 
-
-class TiendaFragment : Fragment() {
+@Suppress("DEPRECATION")
+class TiendaFragment : Fragment(), OnBookItemClickListener {
 
     lateinit var adapter: NosotrosAdapter
+    lateinit var recyclerView: RecyclerView
+    lateinit var firebaseAuth: FirebaseAuth
+    val database:FirebaseFirestore=FirebaseFirestore.getInstance()
     private val viewModel by lazy { ViewModelProvider(this).get(BeerViewModel::class.java) }
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -40,7 +47,7 @@ class TiendaFragment : Fragment() {
     ): View? {
         val view = inflater.inflate(R.layout.fragment_tienda, container, false)
         recyclerNos = view.findViewById(R.id.recyclerview)
-        adapter = NosotrosAdapter(requireContext())
+        adapter = NosotrosAdapter(requireContext(), this)
         recyclerNos.layoutManager = LinearLayoutManager(context)
         recyclerNos.adapter = adapter
 
@@ -84,6 +91,23 @@ class TiendaFragment : Fragment() {
             }
         }
 
+    }
+
+    override fun onItemclick(cerveza: cervezas, position: Int) {
+       val titulo:String=cerveza.titulo
+        val precio:String=cerveza.precio
+        val image:String=cerveza.image
+        val dato= hashMapOf(
+            "titulo" to titulo,
+            "precio" to precio,
+            "image" to image
+        )
+        database.collection("compras")
+            .document(titulo)
+            .set(dato)
+            .addOnSuccessListener {
+                Toast.makeText(context, "El ítem fue añadido al carrito", Toast.LENGTH_SHORT).show()
+            }
     }
 
 }

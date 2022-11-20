@@ -66,16 +66,15 @@
             android:textSize="20dp">
         </TextView>
         <ImageButton
-            android:id="@+id/carrito"
+            android:id="@+id/delete"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="30dp"
             android:layout_toRightOf="@id/title"
-            android:src="@drawable/ic_baseline_add_shopping_cart_24"
+            android:src="@drawable/ic_baseline_remove_shopping_cart_24"
             android:background="@color/fondo_inicio">
 
         </ImageButton>
-
 
     </RelativeLayout>
 
