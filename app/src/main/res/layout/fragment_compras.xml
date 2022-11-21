@@ -38,6 +38,14 @@
 
         </TextView>
     </RelativeLayout>
+
+    <androidx.recyclerview.widget.RecyclerView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:id="@+id/recyclerviewcompra"
+        android:layout_marginTop="155dp"
+        ></androidx.recyclerview.widget.RecyclerView>
+
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/buttonNavigationHome"
         android:layout_width="match_parent"

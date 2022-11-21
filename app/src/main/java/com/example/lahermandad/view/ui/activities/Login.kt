@@ -47,7 +47,7 @@ class login : AppCompatActivity() {
             startActivity(Intent( this,RecuperarActivity::class.java ))
         }
     }
-    private fun log(correo:String, contrasena:String){
+    /*private fun log(correo:String, contrasena:String){
         firebaseAuth.signInWithEmailAndPassword(correo,contrasena)
             .addOnCompleteListener(this) {
                     task-> if(task.isSuccessful){
@@ -64,5 +64,17 @@ class login : AppCompatActivity() {
             }
         }
 
+    }*/
+    private fun log(correo:String, contrasena:String ){
+        firebaseAuth.signInWithEmailAndPassword(correo, contrasena)
+            .addOnCompleteListener(this) { Task ->
+                if (Task.isSuccessful) {
+                    val user = firebaseAuth.currentUser
+                    Toast.makeText(baseContext, user?.uid.toString(), Toast.LENGTH_SHORT).show()
+                    startActivity(Intent(this, HomeActivity::class.java))
+                } else {
+                    Toast.makeText(baseContext, "usuario incorrecto", Toast.LENGTH_SHORT).show()
+                }
+            }
     }
 }
