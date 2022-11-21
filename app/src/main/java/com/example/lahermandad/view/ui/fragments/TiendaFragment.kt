@@ -102,9 +102,11 @@ class TiendaFragment : Fragment(), OnBookItemClickListener {
         val dato= hashMapOf(
             "titulo" to titulo,
             "precio" to precio,
-            "image" to image,
             "iva" to iva,
-            "subtotal" to subtotal
+            "subtotal" to subtotal,
+            "image" to image
+
+
         )
         database.collection("compras")
             .document(titulo)

@@ -11,10 +11,12 @@
     app:cardElevation="6dp"
     app:contentPadding="4dp"
     >
+
     <RelativeLayout
         android:layout_width="match_parent"
-        android:layout_height="match_parent"
+        android:layout_height="120dp"
         android:padding="16dp">
+
         <ImageView
             android:id="@+id/image1"
             android:layout_width="100dp"
@@ -24,55 +26,63 @@
             android:layout_alignParentTop="true"
             android:layout_marginEnd="16dp"
             android:layout_marginRight="16dp">
+
         </ImageView>
+
         <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Precio"
-            android:fontFamily="@font/myriad_regular"
-            android:textColor="@color/black"
-            android:textStyle="normal"
             android:id="@+id/precio"
-            android:layout_toEndOf="@id/image1"
-            android:layout_toRightOf="@id/image1"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/grado"
-            android:textSize="20dp">
-        </TextView>
-        <TextView
-            android:layout_width="wrap_content"
-            android:layout_height="wrap_content"
-            android:text="Nombre Cerveza"
-            android:fontFamily="@font/myriad_regular"
-            android:textColor="@color/black"
-            android:textStyle="normal"
-            android:id="@+id/title"
-            android:textAlignment="center"
             android:layout_toEndOf="@id/image1"
             android:layout_toRightOf="@id/image1"
-            android:textSize="20dp">
+            android:fontFamily="@font/myriad_regular"
+            android:text="Precio"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="normal">
+
         </TextView>
+
         <TextView
+            android:id="@+id/title"
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
-            android:text="Grado de Alcohol"
+            android:layout_toEndOf="@id/image1"
+            android:layout_toRightOf="@id/image1"
             android:fontFamily="@font/myriad_regular"
-            android:textColor="@color/black"
-            android:textStyle="normal"
-            android:id="@+id/grado"
+            android:text="Nombre Cerveza"
             android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="normal">
+
+        </TextView>
+
+        <TextView
+            android:id="@+id/grado"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
             android:layout_below="@+id/title"
             android:layout_toEndOf="@id/image1"
             android:layout_toRightOf="@id/image1"
-            android:textSize="20dp">
+            android:fontFamily="@font/myriad_regular"
+            android:text="Grado de Alcohol"
+            android:textAlignment="center"
+            android:textColor="@color/black"
+            android:textSize="20dp"
+            android:textStyle="normal">
+
         </TextView>
+
         <ImageButton
             android:id="@+id/carrito"
             android:layout_width="50dp"
             android:layout_height="50dp"
             android:layout_marginLeft="30dp"
             android:layout_toRightOf="@id/title"
-            android:src="@drawable/ic_baseline_add_shopping_cart_24"
-            android:background="@color/fondo_inicio">
+            android:background="@color/fondo_inicio"
+            android:src="@drawable/ic_baseline_add_shopping_cart_24">
 
         </ImageButton>
 

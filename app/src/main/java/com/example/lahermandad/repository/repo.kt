@@ -21,7 +21,7 @@ class repo {
                     val grado = document.getString("grado")
                     val image = document.getString("image")
 
-                    val cerveza = cervezas(titulo!!,precio!!,grado!!,image!!, iva!!, subtotal!!)
+                    val cerveza = cervezas(titulo!!,precio!!,image!!, iva!!, subtotal!!, grado!!)
                     listaData.add(cerveza)
                 }
                 mutabledata.value = listaData
@@ -44,6 +44,7 @@ class repo {
                     val iva=document.getString("iva")
                     val subtotal=document.getString("subtotal")
                     val image=document.getString("image")
+                    //val grado=document.getString("grado")
                     val compra=compras(titulo!!, precio!!, image!!, subtotal!!, iva!!)
                     listData.add(compra)
 

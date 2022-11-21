@@ -31,7 +31,7 @@ class NosotrosAdapter(private val context: Context, var clickListener: OnBookIte
      fun binWeb(cerveza: cervezas, action:OnBookItemClickListener){
          itemView.findViewById<TextView>(R.id.title).text=cerveza.titulo
          itemView.findViewById<TextView>(R.id.precio).text=cerveza.precio
-         itemView.findViewById<TextView>(R.id.grado).text=cerveza.grado
+         //itemView.findViewById<TextView>(R.id.grado).text=cerveza.grado
          //itemView.findViewById<TextView>(R.id.preciosubtotal).text=cerveza.subtotal
         // itemView.findViewById<TextView>(R.id.ivatotal).text=cerveza.iva
          Picasso.with(context).load(cerveza.image).into(itemView.findViewById<ImageView>(R.id.image1))

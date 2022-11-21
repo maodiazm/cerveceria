@@ -43,48 +43,56 @@
         android:layout_width="208dp"
         android:layout_height="31dp"
         android:layout_marginLeft="180dp"
-        android:layout_marginTop="600dp"
+        android:layout_marginTop="630dp"
         android:background="@color/color_secundario"
         android:text="0"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="20dp"></TextView>
+        android:textSize="20dp">
+
+    </TextView>
 
     <TextView
         android:id="@+id/ivatotal"
         android:layout_width="208dp"
-        android:layout_height="31dp"
+        android:layout_height="25dp"
         android:layout_marginLeft="180dp"
-        android:layout_marginTop="550dp"
+        android:layout_marginTop="580dp"
         android:background="@color/fondo_inicio"
         android:text="0"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="20dp"></TextView>
+        android:textSize="20dp">
+
+    </TextView>
 
     <TextView
         android:id="@+id/preciosubtotal"
         android:layout_width="208dp"
-        android:layout_height="31dp"
+        android:layout_height="25dp"
         android:layout_marginLeft="180dp"
-        android:layout_marginTop="500dp"
+        android:layout_marginTop="530dp"
         android:background="@color/fondo_inicio"
         android:text="0"
         android:textAlignment="center"
         android:textColor="@color/white"
-        android:textSize="20dp"></TextView>
+        android:textSize="20dp">
+
+    </TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerviewcompra"
         android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="250dp"></androidx.recyclerview.widget.RecyclerView>
+        android:layout_height="190dp"
+        android:layout_marginTop="230dp">
+
+    </androidx.recyclerview.widget.RecyclerView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/buttonNavigationHome"
         android:layout_width="match_parent"
         android:layout_height="55dp"
-        android:layout_marginTop="650dp"
+        android:layout_marginTop="670dp"
         android:background="@color/white"
         app:itemIconTint="@color/color_secundario"
         app:itemTextColor="@color/black"
@@ -101,7 +109,7 @@
         android:layout_width="273dp"
         android:layout_height="wrap_content"
         android:layout_marginStart="9dp"
-        android:layout_marginTop="66dp"
+        android:layout_marginTop="45dp"
         android:layout_marginEnd="81dp"
         android:fontFamily="@font/capsmall_clean"
         android:gravity="center"
@@ -117,7 +125,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="601dp"
+        android:layout_marginTop="633dp"
         android:text="Total Compra"
         android:textSize="20dp"
         android:textColor="@color/color_secundario"
@@ -130,7 +138,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="551dp"
+        android:layout_marginTop="583dp"
         android:text="Valor IVA"
         android:textSize="20dp"
         android:textColor="@color/color_secundario"
@@ -143,7 +151,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginLeft="30dp"
-        android:layout_marginTop="501dp"
+        android:layout_marginTop="531dp"
         android:text="Subtotal"
         android:textSize="20dp"
         android:textColor="@color/color_secundario"
