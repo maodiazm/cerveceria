@@ -22,29 +22,38 @@
             android:src="@drawable/logo">
 
         </ImageView>
-        <TextView
-            android:layout_width="281dp"
-            android:layout_height="115dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="9dp"
-            android:layout_marginEnd="81dp"
-            android:gravity="center"
-            android:text="Historial De Pedidos"
-            android:textStyle="normal"
-            android:textColor="@color/white"
-            android:fontFamily="@font/capsmall_clean"
-            android:textSize="40sp">
 
-        </TextView>
+
     </RelativeLayout>
 
+    <TextView
+        android:id="@+id/preciototal"
+        android:layout_width="208dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="160dp"
+        android:layout_marginLeft="200dp"
+        android:background="@color/fondo_inicio"
+        android:text="Compra"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="40dp"></TextView>
+
+    <TextView
+        android:id="@+id/realizar"
+        android:layout_width="208dp"
+        android:layout_height="55dp"
+        android:layout_marginTop="160dp"
+        android:background="@color/color_secundario"
+        android:text="0"
+        android:textColor="@color/white"
+        android:textAlignment="center"
+        android:textSize="40dp"></TextView>
+
     <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/recyclerviewcompra"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:id="@+id/recyclerviewcompra"
-        android:layout_marginTop="155dp"
-        ></androidx.recyclerview.widget.RecyclerView>
+        android:layout_marginTop="250dp"></androidx.recyclerview.widget.RecyclerView>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/buttonNavigationHome"
@@ -61,5 +70,24 @@
         tools:ignore="MissingContrains">
 
     </com.google.android.material.bottomnavigation.BottomNavigationView>
+
+    <TextView
+
+        android:layout_width="273dp"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="9dp"
+        android:layout_marginTop="66dp"
+        android:layout_marginEnd="81dp"
+        android:fontFamily="@font/capsmall_clean"
+        android:gravity="center"
+        android:text="Carrito de compras"
+        android:textColor="@color/white"
+        android:textSize="40sp"
+        android:textStyle="normal">
+
+    </TextView>
+
+
+
 
 </FrameLayout>

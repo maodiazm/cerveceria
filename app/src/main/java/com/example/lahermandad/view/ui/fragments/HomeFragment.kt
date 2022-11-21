@@ -83,6 +83,10 @@ class HomeFragment : Fragment() {
         cardGps.setOnClickListener {
             findNavController().navigate(R.id.action_homeFragment_to_GpsFragment)
         }
+        val cardCompra=view.findViewById<ImageView>(R.id.compra)
+        cardCompra.setOnClickListener {
+            findNavController().navigate(R.id.action_homeFragment_to_ComprasFragment)
+        }
 
     }
 
