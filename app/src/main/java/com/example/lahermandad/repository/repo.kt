@@ -16,10 +16,12 @@ class repo {
                 for (document in result){
                     val titulo = document.getString("titulo")
                     val precio = document.getString("precio")
+                    val iva = document.getString("iva")
+                    val subtotal = document.getString("subtotal")
                     val grado = document.getString("grado")
                     val image = document.getString("image")
 
-                    val cerveza = cervezas(titulo!!,precio!!,grado!!,image!!)
+                    val cerveza = cervezas(titulo!!,precio!!,grado!!,image!!, iva!!, subtotal!!)
                     listaData.add(cerveza)
                 }
                 mutabledata.value = listaData
@@ -39,8 +41,10 @@ class repo {
                 for(document in result){
                     val titulo=document.getString("titulo")
                     val precio=document.getString("precio")
+                    val iva=document.getString("iva")
+                    val subtotal=document.getString("subtotal")
                     val image=document.getString("image")
-                    val compra=compras(titulo!!, precio!!, image!!)
+                    val compra=compras(titulo!!, precio!!, image!!, subtotal!!, iva!!)
                     listData.add(compra)
 
                 }

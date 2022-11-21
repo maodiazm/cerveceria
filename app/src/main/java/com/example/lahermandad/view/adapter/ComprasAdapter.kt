@@ -30,6 +30,8 @@ class ComprasAdapter(private val context: Context, var clickListener: OnCompraIt
         fun binWeb(cerveza: compras, action:OnCompraItemClickListener){
             itemView.findViewById<TextView>(R.id.title).text=cerveza.titulo
             itemView.findViewById<TextView>(R.id.precio).text=cerveza.precio
+            itemView.findViewById<TextView>(R.id.subtotal).text=cerveza.subtotal
+            itemView.findViewById<TextView>(R.id.iva).text=cerveza.iva
             //itemView.findViewById<TextView>(R.id.grado).text=cerveza.grado
             Picasso.with(context).load(cerveza.image).into(itemView.findViewById<ImageView>(R.id.image1))
             val btneliminar=itemView.findViewById<ImageButton>(R.id.eliminar)

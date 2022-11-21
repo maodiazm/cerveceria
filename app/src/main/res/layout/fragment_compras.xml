@@ -28,26 +28,51 @@
 
     <TextView
         android:id="@+id/realizar"
-        android:layout_width="208dp"
-        android:layout_height="55dp"
+        android:layout_width="190dp"
+        android:layout_height="45dp"
         android:layout_marginTop="160dp"
         android:layout_marginLeft="200dp"
         android:background="@color/fondo_inicio"
-        android:text="Compra"
+        android:text="Checkout"
         android:textColor="@color/white"
         android:textAlignment="center"
-        android:textSize="40dp"></TextView>
+        android:textSize="30dp"></TextView>
 
     <TextView
         android:id="@+id/preciototal"
         android:layout_width="208dp"
-        android:layout_height="55dp"
-        android:layout_marginTop="160dp"
+        android:layout_height="31dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="600dp"
         android:background="@color/color_secundario"
         android:text="0"
-        android:textColor="@color/white"
         android:textAlignment="center"
-        android:textSize="40dp"></TextView>
+        android:textColor="@color/white"
+        android:textSize="20dp"></TextView>
+
+    <TextView
+        android:id="@+id/iva"
+        android:layout_width="208dp"
+        android:layout_height="31dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="550dp"
+        android:background="@color/fondo_inicio"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"></TextView>
+
+    <TextView
+        android:id="@+id/subtotal"
+        android:layout_width="208dp"
+        android:layout_height="31dp"
+        android:layout_marginLeft="180dp"
+        android:layout_marginTop="500dp"
+        android:background="@color/fondo_inicio"
+        android:text="0"
+        android:textAlignment="center"
+        android:textColor="@color/white"
+        android:textSize="20dp"></TextView>
 
     <androidx.recyclerview.widget.RecyclerView
         android:id="@+id/recyclerviewcompra"
@@ -87,7 +112,43 @@
 
     </TextView>
 
+    <TextView
+        android:id="@+id/textTotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="601dp"
+        android:text="Total Compra"
+        android:textSize="20dp"
+        android:textColor="@color/color_secundario"
+        android:fontFamily="@font/opensanslight"
+        android:textStyle="bold"
+        />
 
+    <TextView
+        android:id="@+id/textIVA"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="551dp"
+        android:text="Valor IVA"
+        android:textSize="20dp"
+        android:textColor="@color/color_secundario"
+        android:fontFamily="@font/opensanslight"
+        android:textStyle="bold"
+        />
 
+    <TextView
+        android:id="@+id/textSubtotal"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="30dp"
+        android:layout_marginTop="501dp"
+        android:text="Subtotal"
+        android:textSize="20dp"
+        android:textColor="@color/color_secundario"
+        android:fontFamily="@font/opensanslight"
+        android:textStyle="bold"
+        />
 
 </FrameLayout>

@@ -27,6 +27,8 @@ class ComprasFragment : Fragment(), OnCompraItemClickListener {
     lateinit var recyclerView: RecyclerView
     lateinit var adapter: ComprasAdapter
     lateinit var precioT:TextView
+    lateinit var precioSub:TextView
+    lateinit var precioIva:TextView
     lateinit var compraT:TextView
     val database:FirebaseFirestore=FirebaseFirestore.getInstance()
     private val viewModel by lazy { ViewModelProvider(this).get(ComprasViewModel::class.java) }
@@ -48,12 +50,16 @@ class ComprasFragment : Fragment(), OnCompraItemClickListener {
         val view=inflater.inflate(R.layout.fragment_compras, container, false)
         recyclerView=view.findViewById(R.id.recyclerviewcompra)
         precioT=view.findViewById(R.id.preciototal)
+        precioSub=view.findViewById(R.id.subtotal)
+        precioIva=view.findViewById(R.id.iva)
         compraT=view.findViewById(R.id.realizar)
         adapter= ComprasAdapter(requireContext(), this)
         recyclerView.layoutManager=LinearLayoutManager(context)
         recyclerView.adapter=adapter
         observeData()
         preciototal()
+        preciosubtotal()
+        precioiva()
         compraT.setOnClickListener{
             realizarcompra()
         }
@@ -83,7 +89,39 @@ class ComprasFragment : Fragment(), OnCompraItemClickListener {
 
 
     }
+    private fun preciosubtotal(){
+        database.collection("compras")
+            .get()
+            .addOnSuccessListener {
+                    result ->
+                val subtotalunit= mutableListOf<String>()
+                for(document in result) {
+                    val subtotal = document["subtotal"].toString()
+                    subtotalunit.add(subtotal!!)
+                }
+                val preciosubtotal=subtotalunit.mapNotNull { it.toIntOrNull() }.sum()
+                precioSub.setText(Integer.toString(preciosubtotal))
+            }
 
+
+    }
+
+    private fun precioiva(){
+        database.collection("compras")
+            .get()
+            .addOnSuccessListener {
+                    result ->
+                val ivaunit= mutableListOf<String>()
+                for(document in result) {
+                    val iva = document["iva"].toString()
+                    ivaunit.add(iva!!)
+                }
+                val precioiva=ivaunit.mapNotNull { it.toIntOrNull() }.sum()
+                precioIva.setText(Integer.toString(precioiva))
+            }
+
+
+    }
     private fun realizarcompra(){
 
         val builder=AlertDialog.Builder(requireContext())
