@@ -27,7 +27,7 @@
     </RelativeLayout>
 
     <TextView
-        android:id="@+id/preciototal"
+        android:id="@+id/realizar"
         android:layout_width="208dp"
         android:layout_height="55dp"
         android:layout_marginTop="160dp"
@@ -39,7 +39,7 @@
         android:textSize="40dp"></TextView>
 
     <TextView
-        android:id="@+id/realizar"
+        android:id="@+id/preciototal"
         android:layout_width="208dp"
         android:layout_height="55dp"
         android:layout_marginTop="160dp"

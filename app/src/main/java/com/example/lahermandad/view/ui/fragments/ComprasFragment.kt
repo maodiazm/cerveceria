@@ -98,8 +98,12 @@ class ComprasFragment : Fragment(), OnCompraItemClickListener {
             .show()
     }
 
+
+
     override fun onItemclick(cerveza: compras, position: Int) {
-        TODO("Not yet implemented")
+        database.collection("compras")
+            .document(cerveza.titulo)
+            .delete()
     }
 
 
