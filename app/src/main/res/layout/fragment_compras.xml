@@ -51,7 +51,7 @@
         android:textSize="20dp"></TextView>
 
     <TextView
-        android:id="@+id/iva"
+        android:id="@+id/ivatotal"
         android:layout_width="208dp"
         android:layout_height="31dp"
         android:layout_marginLeft="180dp"
@@ -63,7 +63,7 @@
         android:textSize="20dp"></TextView>
 
     <TextView
-        android:id="@+id/subtotal"
+        android:id="@+id/preciosubtotal"
         android:layout_width="208dp"
         android:layout_height="31dp"
         android:layout_marginLeft="180dp"

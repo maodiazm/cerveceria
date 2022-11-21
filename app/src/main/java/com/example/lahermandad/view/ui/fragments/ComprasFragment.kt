@@ -50,8 +50,8 @@ class ComprasFragment : Fragment(), OnCompraItemClickListener {
         val view=inflater.inflate(R.layout.fragment_compras, container, false)
         recyclerView=view.findViewById(R.id.recyclerviewcompra)
         precioT=view.findViewById(R.id.preciototal)
-        precioSub=view.findViewById(R.id.subtotal)
-        precioIva=view.findViewById(R.id.iva)
+        precioSub=view.findViewById(R.id.preciosubtotal)
+        precioIva=view.findViewById(R.id.ivatotal)
         compraT=view.findViewById(R.id.realizar)
         adapter= ComprasAdapter(requireContext(), this)
         recyclerView.layoutManager=LinearLayoutManager(context)
@@ -94,12 +94,12 @@ class ComprasFragment : Fragment(), OnCompraItemClickListener {
             .get()
             .addOnSuccessListener {
                     result ->
-                val subtotalunit= mutableListOf<String>()
+                val subtotalunitario= mutableListOf<String>()
                 for(document in result) {
                     val subtotal = document["subtotal"].toString()
-                    subtotalunit.add(subtotal!!)
+                    subtotalunitario.add(subtotal!!)
                 }
-                val preciosubtotal=subtotalunit.mapNotNull { it.toIntOrNull() }.sum()
+                val preciosubtotal=subtotalunitario.mapNotNull { it.toIntOrNull() }.sum()
                 precioSub.setText(Integer.toString(preciosubtotal))
             }
 
