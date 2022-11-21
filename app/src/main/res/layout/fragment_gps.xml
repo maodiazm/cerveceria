@@ -6,38 +6,14 @@
     android:layout_height="match_parent"
     tools:context=".view.ui.fragments.GpsFragment">
 
-    <RelativeLayout
-        android:id="@+id/encabezado"
+    <fragment
+        android:id="@+id/VistaMapa"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="25dp"
-        android:layout_marginRight="20dp"
-        android:layout_marginLeft="20dp"
-        android:background="@drawable/theme_gradients_background">
+        android:name="com.google.android.gms.maps.SupportMapFragment"
+        >
 
-        <ImageView
-            android:layout_width="111dp"
-            android:layout_height="120dp"
-            android:layout_alignParentRight="true"
-            android:src="@drawable/mapa">
-
-        </ImageView>
-        <TextView
-            android:layout_width="281dp"
-            android:layout_height="115dp"
-            android:layout_alignParentStart="true"
-            android:layout_alignParentEnd="true"
-            android:layout_marginStart="0dp"
-            android:layout_marginEnd="81dp"
-            android:gravity="center"
-            android:text="Ubicacion"
-            android:textStyle="normal"
-            android:textColor="@color/black"
-            android:fontFamily="@font/capsmall_clean"
-            android:textSize="40sp">
-
-        </TextView>
-    </RelativeLayout>
+    </fragment>
 
     <com.google.android.material.bottomnavigation.BottomNavigationView
         android:id="@+id/buttonNavigationMenu"

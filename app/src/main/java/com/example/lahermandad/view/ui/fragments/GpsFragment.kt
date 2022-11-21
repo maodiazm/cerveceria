@@ -7,18 +7,24 @@ import android.view.View
 import android.view.ViewGroup
 import androidx.navigation.fragment.findNavController
 import com.example.lahermandad.R
+import com.google.android.gms.maps.GoogleMap
+import com.google.android.gms.maps.OnMapReadyCallback
+import com.google.android.gms.maps.SupportMapFragment
 import com.google.android.material.bottomnavigation.BottomNavigationView
 
 
-class GpsFragment : Fragment() {
+class GpsFragment : Fragment(), OnMapReadyCallback {
+    private lateinit var googleMap : GoogleMap
 
 
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,
         savedInstanceState: Bundle?
     ): View? {
-        // Inflate the layout for this fragment
-        return inflater.inflate(R.layout.fragment_gps, container, false)
+        val view= inflater.inflate(R.layout.fragment_gps, container, false)
+        val mapFragment=this.childFragmentManager.findFragmentById(R.id.VistaMapa) as SupportMapFragment
+        mapFragment.getMapAsync(this)
+        return view
     }
 
     override fun onViewCreated(view: View, savedInstanceState: Bundle?) {
@@ -31,6 +37,10 @@ class GpsFragment : Fragment() {
                 R.id.tienda -> findNavController().navigate(R.id.action_gpsFragment_to_tiendaFragment)
             }
         }
+
+    }
+
+    override fun onMapReady(p0: GoogleMap) {
 
     }
 
